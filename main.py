@@ -13,7 +13,7 @@ st.set_page_config(
     page_icon="📊",
 )
 
-st.write("# UN-Vision-AI: Automatic Generation of Visualizations and Infographics using Large Language Models 📊")
+st.write("# UN-Vision-AI: Automatic Generation of Visualizations and Infographics using Large Language Models (LLMs)")
 
 st.sidebar.write("## Setup")
 
