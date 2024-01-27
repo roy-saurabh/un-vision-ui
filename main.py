@@ -71,8 +71,8 @@ if openai_key:
 
     datasets = [
         {"label": "Select a dataset", "url": None},
-        {"label": "SDG-National", "url": "https://drive.google.com/uc?export=download&id=1KG3bGibgmkZlEAUWDvkTI63cAAuaKFUQ"},
-        {"label": "SDG-Regional", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQxOlfW2xp9wq6oJEAKiumqF9y2GZIHZs4Qrhzb1S7O8iaRfodug-S05Wfl-f_ZQywjy-qKI6NieiWu/pub?gid=1686899548&single=true&output=csv"},
+        {"label": "SDG-National", "url": "https://raw.githubusercontent.com/roy-saurabh/un-vision-ui/main/datasets/SDG_DATA_NATIONAL.csv"},
+        {"label": "SDG-Regional", "url": "https://raw.githubusercontent.com/roy-saurabh/un-vision-ui/main/datasets/SDG_DATA_REGIONAL.csv"},
     ]
 
     selected_dataset_label = st.sidebar.selectbox(
