@@ -1,3 +1,4 @@
 git+https://github.com/roy-saurabh/lida.git
 git+https://github.com/roy-saurabh/llmx.git 
 streamlit
+pillow>=10.2.0 # not directly required, pinned by Snyk to avoid a vulnerability
