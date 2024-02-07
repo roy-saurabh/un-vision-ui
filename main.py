@@ -9,11 +9,11 @@ import pandas as pd
 os.makedirs("data", exist_ok=True)
 
 st.set_page_config(
-    page_title="UN-Vision-AI: Automatic Generation of Visualizations and Infographics",
-    page_icon="📊",
+    page_title="EduDataBot: Automatic Generation of Visualizations and Infographics",
+    page_icon="#",
 )
 
-st.write("# UN-Vision-AI: Automatic Generation of Visualizations and Infographics using Large Language Models (LLMs)")
+st.write("# EduDataBot: Automatic Generation of Visualizations and Infographics using Large Language Models (LLMs)")
 
 st.sidebar.write("## Setup")
 
@@ -23,7 +23,7 @@ openai_key = os.getenv("AZURE_OPENAI_API_KEY")
 if not openai_key:
     openai_key = st.sidebar.text_input("Enter OpenAI API key:")
     if openai_key:
-        display_key = openai_key[:2] + "*" * (len(openai_key) - 5) + openai_key[-3:]
+        display_key = openai_key[:2] + "*" * (len(openai_key) - 5) + openai_key[-2:]
         st.sidebar.write(f"Current key: {display_key}")
     else:
         st.sidebar.write("Please enter OpenAI API key.")
@@ -33,7 +33,7 @@ else:
 
 st.markdown(
     """
-    UN-Vision-AI leverages python libraries like Llamaindex, Lida and AffectLog for generating data visualizations and data-faithful infographics and is grammar agnostic (will work with any programming language and visualization
+    EduDataBot leverages python libraries like Llamaindex, Lida and AffectLog for generating data visualizations and data-faithful infographics and is grammar agnostic (will work with any programming language and visualization
     libraries e.g. matplotlib, seaborn, altair, d3 etc) and works with multiple large language model providers (OpenAI, Azure OpenAI, PaLM, Cohere, Huggingface). 
     See the project page [here](https://github.com/roy-saurabh/un-vision-ai/) for updates!.
 
