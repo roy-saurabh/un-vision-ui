@@ -70,14 +70,8 @@ st.markdown(
 
     <span style='color:grey;'>
     **Disclaimer:**
-    The Education Databot aims to deliver insightful education data visualizations, yet users should be aware of its prototype limitations. The tool's Retrieval-Augmented Generation (RAG) depends on a limited initial vector datastore, which may restrict data point
-     access for visualization. Additionally, the choice of visual representation by our advanced libraries may not always align perfectly with the intended goals due to their developmental stages. Our AI models, including OpenAI's GPT-3.5 Turbo and Azure OpenAI API, 
-     along with libraries like LlamaIndex, Lida, Trulens, and AffectLog, are crafted to enhance visualization with UNESCO Institute for Statistics (UIS) data. However, their outputs are shaped by their training and algorithms, meaning visualizations should aid, not 
-     replace, comprehensive data analysis. We're actively working to broaden our data access, refine AI models, and improve visualization options. Feedback is welcome to enhance the tool's precision and utility. For optimal use, please refer to the project README for 
-     customization guidance and stay updated on our progress.
+    The Education Databot aims to deliver insightful education data visualizations, yet users should be aware of its prototype limitations. The tool's Retrieval-Augmented Generation (RAG) depends on a limited initial vector datastore, which may restrict data point access for visualization. Additionally, the choice of visual representation by our advanced libraries may not always align perfectly with the intended goals due to their developmental stages. Our AI models, including OpenAI's GPT-3.5 Turbo and Azure OpenAI API, along with libraries like LlamaIndex, Lida, Trulens, and AffectLog, are crafted to enhance visualization with UNESCO Institute for Statistics (UIS) data. However, their outputs are shaped by their training and algorithms, meaning visualizations should aid, not replace, comprehensive data analysis. We're actively working to broaden our data access, refine AI models, and improve visualization options. Feedback is welcome to enhance the tool's precision and utility. For optimal use, please refer to the project README for customization guidance and stay updated on our progress.
     </span>
-
-    
    ----
 """)
 
