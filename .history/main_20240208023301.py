@@ -10,11 +10,11 @@ os.makedirs("data", exist_ok=True)
 
 st.set_page_config(
     page_title="EduDataBot: Automatic Generation of Visualizations and Infographics",
-    page_icon="docs/images/unesco-16-168843.png",
+    page_icon="unesco-16-168843.png",
 )
 st.markdown('''
     <div style='text-align: center;'>
-        <img src='docs/images/UNESCO_UIS_logo_color_eng.jpg' style='max-width: 100%; height: auto;' alt='UNESCO Logo'>
+        <img src='UNESCO_UIS_logo_color_eng.jpg' style='max-width: 100%; height: auto;' alt='UNESCO Logo'>
     </div>
     ''', unsafe_allow_html=True)
 
