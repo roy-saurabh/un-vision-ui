@@ -32,16 +32,13 @@ openai_key = os.getenv("AZURE_OPENAI_API_KEY")
 if not openai_key:
     openai_key = st.sidebar.text_input("Enter OpenAI API key:")
     if openai_key:
-        display_key = openai_key[:2] + "*" * \
-            (len(openai_key) - 5) + openai_key[-2:]
+        display_key = openai_key[:2] + "*" * (len(openai_key) - 5) + openai_key[-2:]
         st.sidebar.write(f"Current key: {display_key}")
     else:
         st.sidebar.write("Please enter OpenAI API key.")
 else:
-    display_key = openai_key[:2] + "*" * \
-        (len(openai_key) - 5) + openai_key[-3:]
-    st.sidebar.write(
-        f"Azure OpenAI API key loaded from environment variable: {display_key}")
+    display_key = openai_key[:2] + "*" * (len(openai_key) - 5) + openai_key[-3:]
+    st.sidebar.write(f"Azure OpenAI API key loaded from environment variable: {display_key}")
 
 st.markdown(
     """
@@ -83,24 +80,16 @@ if openai_key:
 
     datasets = [
         {"label": "Select a dataset", "url": None},
-        {"label": "Education facilities and safety",
-            "url": "https://raw.githubusercontent.com/roy-saurabh/un-vision-ui/main/datasets/Education_facilities_and_safety.csv"},
-        {"label": "Equal access",
-            "url": "https://raw.githubusercontent.com/roy-saurabh/un-vision-ui/main/datasets/Equal_access.csv"},
-        {"label": "Literacy and numeracy",
-            "url": "https://raw.githubusercontent.com/roy-saurabh/un-vision-ui/main/datasets/Literacy_and_numeracy.csv"},
-        {"label": "Pre-primary education",
-            "url": "https://raw.githubusercontent.com/roy-saurabh/un-vision-ui/main/datasets/Pre_primary_education.csv"},
-        {"label": "Primary and secondary education",
-            "url": "https://raw.githubusercontent.com/roy-saurabh/un-vision-ui/main/datasets/Primary_and_secondary_education.csv"},
-        {"label": "Scholarships",
-            "url": "https://raw.githubusercontent.com/roy-saurabh/un-vision-ui/main/datasets/Scholarships.csv"},
+        {"label": "Education facilities and safety", "url": "https://raw.githubusercontent.com/roy-saurabh/un-vision-ui/main/datasets/Education_facilities_and_safety.csv"},
+        {"label": "Equal access", "url": "https://raw.githubusercontent.com/roy-saurabh/un-vision-ui/main/datasets/Equal_access.csv"},
+        {"label": "Literacy and numeracy", "url": "https://raw.githubusercontent.com/roy-saurabh/un-vision-ui/main/datasets/Literacy_and_numeracy.csv"},
+        {"label": "Pre-primary education", "url": "https://raw.githubusercontent.com/roy-saurabh/un-vision-ui/main/datasets/Pre_primary_education.csv"},
+        {"label": "Primary and secondary education", "url": "https://raw.githubusercontent.com/roy-saurabh/un-vision-ui/main/datasets/Primary_and_secondary_education.csv"},
+        {"label": "Scholarships", "url": "https://raw.githubusercontent.com/roy-saurabh/un-vision-ui/main/datasets/Scholarships.csv"},
         {"label": "Skills", "url": "https://raw.githubusercontent.com/roy-saurabh/un-vision-ui/main/datasets/Skills.csv"},
-        {"label": "Sustainable development knowledge",
-            "url": "https://raw.githubusercontent.com/roy-saurabh/un-vision-ui/main/datasets/Sustainable_development_knowledge.csv"},
+        {"label": "Sustainable development knowledge", "url": "https://raw.githubusercontent.com/roy-saurabh/un-vision-ui/main/datasets/Sustainable_development_knowledge.csv"},
         {"label": "Teachers", "url": "https://raw.githubusercontent.com/roy-saurabh/un-vision-ui/main/datasets/Teachers.csv"},
-        {"label": "Technical vocational and tertiary",
-            "url": "https://raw.githubusercontent.com/roy-saurabh/un-vision-ui/main/datasets/Technical_vocational_and_tertiary.csv"},
+        {"label": "Technical vocational and tertiary", "url": "https://raw.githubusercontent.com/roy-saurabh/un-vision-ui/main/datasets/Technical_vocational_and_tertiary.csv"},
     ]
 
     selected_dataset_label = st.sidebar.selectbox(
@@ -112,8 +101,7 @@ if openai_key:
     upload_own_data = st.sidebar.checkbox("Upload your own data")
 
     if upload_own_data:
-        uploaded_file = st.sidebar.file_uploader(
-            "Choose a CSV or JSON file", type=["csv", "json"])
+        uploaded_file = st.sidebar.file_uploader("Choose a CSV or JSON file", type=["csv", "json"])
 
         if uploaded_file is not None:
             # Get the original file name and extension
@@ -139,8 +127,7 @@ if openai_key:
                                      for dataset in datasets].index(selected_dataset_label)]["url"]
 
     if not selected_dataset:
-        st.info(
-            "To continue, select a dataset from the sidebar on the left or upload your own.")
+        st.info("To continue, select a dataset from the sidebar on the left or upload your own.")
 
     st.sidebar.write("### Choose a summarization method")
     # summarization_methods = ["default", "llm", "columns"]
@@ -233,13 +220,11 @@ if openai_key and selected_dataset and selected_method:
 
             if user_goal:
 
-                new_goal = Goal(question=user_goal,
-                                visualization=user_goal, rationale="")
+                new_goal = Goal(question=user_goal, visualization=user_goal, rationale="")
                 goals.append(new_goal)
                 goal_questions.append(new_goal.question)
 
-        selected_goal = st.selectbox(
-            'Choose a generated goal', options=goal_questions, index=0)
+        selected_goal = st.selectbox('Choose a generated goal', options=goal_questions, index=0)
 
         # st.markdown("### Selected Goal")
         selected_goal_index = goal_questions.index(selected_goal)
@@ -280,11 +265,9 @@ if openai_key and selected_dataset and selected_method:
                 textgen_config=textgen_config,
                 library=selected_library)
 
-            viz_titles = [
-                f'Visualization {i+1}' for i in range(len(visualizations))]
+            viz_titles = [f'Visualization {i+1}' for i in range(len(visualizations))]
 
-            selected_viz_title = st.selectbox(
-                'Choose a visualization', options=viz_titles, index=0)
+            selected_viz_title = st.selectbox('Choose a visualization', options=viz_titles, index=0)
 
             selected_viz = visualizations[viz_titles.index(selected_viz_title)]
 
@@ -295,8 +278,7 @@ if openai_key and selected_dataset and selected_method:
 
                 imgdata = base64.b64decode(selected_viz.raster)
                 img = Image.open(io.BytesIO(imgdata))
-                st.image(img, caption=selected_viz_title,
-                         use_column_width=True)
+                st.image(img, caption=selected_viz_title, use_column_width=True)
 
             st.write("### Visualization Code")
             st.code(selected_viz.code)
