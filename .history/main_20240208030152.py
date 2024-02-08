@@ -15,8 +15,8 @@ st.set_page_config(
 
 st.markdown(
     """
-    <div style='text-align: right;'>
-        <img src="uis-logo.png" style='width: 100%; max-width: 800px;'>
+    <div style='text-align: center;'>
+        <img src='uis-logo.png' style='width: 100%; max-width: 800px;'>
     </div>
     """,
     unsafe_allow_html=True
