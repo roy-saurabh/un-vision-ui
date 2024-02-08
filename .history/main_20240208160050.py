@@ -14,12 +14,9 @@ st.set_page_config(
 )
 
 # Function to get base64 string
-
-
 def get_image_base64(path):
     with open(path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode()
-
 
 # Convert your image to base64 string
 logo_base64 = get_image_base64("./static/UNESCO_UIS_logo_color_eng.jpg")
