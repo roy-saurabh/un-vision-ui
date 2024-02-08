@@ -54,9 +54,6 @@ else:
 
 st.markdown(
     """
-    This prototype version of the EduDataBot is designed to harness the power of machine learning to better visualize education data. The next development of the tool will include an interactive interface powered by an advanced chatbot. 
-    Fed by the reliable database from the UNESCO Institute for Statistics for SDG 4, it provides a unique and valuable resource for informed decision-making.
-
     EduDataBot leverages python libraries like Llamaindex, Lida, Trulens and AffectLog for generating data visualizations and data-faithful infographics and is grammar agnostic (will work with any programming language and visualization
     libraries e.g. matplotlib, seaborn, altair, d3 etc) and works with multiple large language model providers (OpenAI, Azure OpenAI, PaLM, Cohere, Huggingface). 
     See the project page [here](https://github.com/unesco-uis/un-vision-ai) for updates.
