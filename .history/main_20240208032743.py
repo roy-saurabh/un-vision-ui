@@ -16,7 +16,7 @@ st.set_page_config(
 st.markdown(
     """
     <div style='text-align: right;'>
-        <img src="UNESCO_UIS_logo_color_eng.jpg" style='width: auto; max-width: 300px;'>  <!-- max-width reduced to 300px -->
+        <img src="uis-logo.png" style='width: auto; max-width: 300px;'>  <!-- max-width reduced to 300px -->
     </div>
     """,
     unsafe_allow_html=True
@@ -47,7 +47,7 @@ st.markdown(
     """
     EduDataBot leverages python libraries like Llamaindex, Lida and AffectLog for generating data visualizations and data-faithful infographics and is grammar agnostic (will work with any programming language and visualization
     libraries e.g. matplotlib, seaborn, altair, d3 etc) and works with multiple large language model providers (OpenAI, Azure OpenAI, PaLM, Cohere, Huggingface). 
-    See the project page [here](https://github.com/unesco-uis/un-vision-ai) for updates!.
+    See the project page [here](https://github.com/roy-saurabh/un-vision-ai/) for updates!.
 
    ----
 """)

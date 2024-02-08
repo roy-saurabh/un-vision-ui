@@ -16,7 +16,7 @@ st.set_page_config(
 st.markdown(
     """
     <div style='text-align: right;'>
-        <img src="UNESCO_UIS_logo_color_eng.jpg" style='width: auto; max-width: 300px;'>  <!-- max-width reduced to 300px -->
+        <img src="uis-logo.png" style='width: auto; max-width: 300px;'>  <!-- max-width reduced to 300px -->
     </div>
     """,
     unsafe_allow_html=True
