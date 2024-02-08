@@ -9,7 +9,7 @@ import pandas as pd
 os.makedirs("data", exist_ok=True)
 
 st.set_page_config(
-    page_title="EduDataBot: Automatic Generation of Visualizations and Infographics",
+    page_title="Education Databot: Automatic Generation of Visualizations and Infographics",
     page_icon="./static/unesco-16-168843.png",
 )
 
@@ -22,7 +22,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.write("# EduDataBot: Automatic Generation of Visualizations and Infographics using Large Language Models (LLMs)")
+st.write("# Education Databot: Automatic Generation of Visualizations and Infographics using Large Language Models (LLMs)")
 
 st.sidebar.write("## Setup")
 
@@ -45,7 +45,7 @@ else:
 
 st.markdown(
     """
-    EduDataBot leverages python libraries like Llamaindex, Lida and AffectLog for generating data visualizations and data-faithful infographics and is grammar agnostic (will work with any programming language and visualization
+    Education Databot leverages python libraries like Llamaindex, Lida and AffectLog for generating data visualizations and data-faithful infographics and is grammar agnostic (will work with any programming language and visualization
     libraries e.g. matplotlib, seaborn, altair, d3 etc) and works with multiple large language model providers (OpenAI, Azure OpenAI, PaLM, Cohere, Huggingface). 
     See the project page [here](https://github.com/unesco-uis/un-vision-ai) for updates!.
 

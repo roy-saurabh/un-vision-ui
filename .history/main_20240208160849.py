@@ -9,7 +9,7 @@ import base64
 os.makedirs("data", exist_ok=True)
 
 st.set_page_config(
-    page_title="EduDataBot: Automatic Generation of Visualizations and Infographics",
+    page_title="Education Databot: Automatic Generation of Visualizations and Infographics",
     page_icon="./static/unesco-16-168843.png",
 )
 
@@ -34,7 +34,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.write("# EduDataBot: An AI-enhanced data visualization tool using SDG 4 data")
+st.write("# Education Databot: An AI-enhanced data visualization tool using SDG 4 data")
 
 st.sidebar.write("## Setup")
 
@@ -57,11 +57,11 @@ else:
 
 st.markdown(
     """
-    This prototype version of the EduDataBot is designed to harness the power of machine learning to better visualize education data. The next development of the tool will include an interactive interface powered by an advanced chatbot. 
+    This prototype version of the Education Databot is designed to harness the power of machine learning to better visualize education data. The next development of the tool will include an interactive interface powered by an advanced chatbot. 
     Fed by the reliable database from the UNESCO Institute for Statistics for SDG 4, it provides a unique and valuable resource for informed decision-making.
 
-    EduDataBot utilizes OpenAI's GPT-3.5 Turbo model and Azure OpenAI API to facilitate the creation of data visualizations and infographics, integrating with Python libraries like LlamaIndex, Lida, Trulens, and AffectLog. It supports a variety 
-    of programming and visualization libraries, ensuring compatibility and ease of use. By employing the Retrieval-Augmented Generation (RAG) technique with UIS data, EduDataBot provides accurate and relevant information. 
+    Education Databot utilizes OpenAI's GPT-3.5 Turbo model and Azure OpenAI API to facilitate the creation of data visualizations and infographics, integrating with Python libraries like LlamaIndex, Lida, Trulens, and AffectLog. It supports a variety 
+    of programming and visualization libraries, ensuring compatibility and ease of use. By employing the Retrieval-Augmented Generation (RAG) technique with UIS data, Education Databot provides accurate and relevant information. 
     
     The tool further refines goals through Trulens and AffectLog for trustworthiness, ensuring the generated visualizations are both meaningful and reliable. Users can set objectives, choose goals, and select visualization libraries for tailored plot creation, 
     with provided Python code snippets for further customization. This promotes in-depth data analysis and the ability to modify visualizations for specific needs. 
